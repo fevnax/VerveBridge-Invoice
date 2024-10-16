@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(230, 230, 230);
+}
+
+#text {
+    color: #313643;
+}
+
+#title1 {
+    font-size: 18px;
+    color: #313643;
+}
+
+#title2 {
+    font-size: 16px;
+    color: #313643;
+}
+
+#title3 {
+    font-size: 14px;
+    color: #313643;
+}
+
+.container {
+    margin: 50px 180px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.invoice {
+    width: 100%;
+    height: 800px;
+    background-color: white;
+    box-shadow: 0px 0px 30px 1px rgb(0, 0, 0, 0.1);
+}
+
+.invoice-header {
+    width: 100%;
+    height: 225px;
+    background-color: #e6e6e6;
+}
+
+.invoice-header-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.brand-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+    height: 175px;
+    left: 20%;
+}
+
+.logo {
+    position: relative;
+    left: -10%;
+    width: 50px;
+    height: 50px;
+}
+
+.brand-heading {
+    position: relative;
+    left: -10%;
+}
+
+.brand-title {
+    color: #313643;
+}
+
+.brand-phrase {
+    margin-top: -5px;
+    margin-left: 3px;
+    font-size: 14px;
+    color: #555555;
+}
+
+.invoice-header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    font-size: 52px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    color: #313643;
+    text-transform: uppercase;
+}
+
+.invoice-info {
+    display: flex;
+}
+
+.invoice-number {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.invoice-subtitle {
+    display: flex;
+    position: absolute;
+    font-size: 18px;
+    left: 19%;
+}
+
+.invoice-id {
+    display: flex;
+    position: absolute;
+    font-size: 14px;
+    left: 30%;
+}
+
+.rectangle {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 50px;
+    background-color: #2d7cff;
+    color: #e6e6e6;
+}
+
+.arrow-right {
+    border-top: 25px solid transparent;
+    border-left: 30px solid #2d7cff;
+    border-bottom: 25px solid transparent;
+    height: 0;
+    width: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.invoice-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.invoice-date-sub {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    gap: 20px;
+    color: #313643;
+}
+
+.date {
+    font-size: 14px;
+}
+
+.invoice-details {
+    width: 50%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.invoice-to {
+    width: 32%;
+    position: relative;
+    left: 60px;
+    margin: 30px 0 0 0;
+}
+
+.customer-details {
+    width: 55%;
+    position: relative;
+    left: 60px;
+    margin-top: 35px;
+}
+
+.invoice-table {
+    margin: 0 60px;
+}
+
+.table-header {
+    display: flex;
+    align-items: center;
+    gap: 90px;
+    background-color: #e6e6e6;
+    margin-bottom: 0.2rem;
+}
+
+.table-sn {
+    text-align: center;
+    padding-left: 18px;
+}
+
+.table-arrowr {
+    display: flex;
+    align-items: center;
+    width: 62%;
+}
+
+.table-price {
+    position: relative;
+    left: 5px;
+}
+
+
+/* PURCHASE STYLES */
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    color: #313643;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    width: 40rem;
+    height: auto;
+    border-radius: 1rem;
+    border: 0.25rem solid #2d7cff;
+    background-color: #cecdcd;
+}
+
+.form-header {
+    text-align: center;
+    color: #313643;
+    margin-bottom: 1.5rem;
+}
+
+.form-details {
+    width: 95%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-subtitle {
+    font-size: 1.3rem;
+}
+
+label,
+input {
+    height: 2rem;
+    width: 35rem;
+    border-radius: 2.5rem;
+    border: none;
+    text-indent: 0.7rem;
+}
+
+input {
+    margin-bottom: 0.5rem;
+}
+
+textarea {
+    border-radius: 0.7rem;
+    width: 35rem;
+    height: 5rem;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 8rem;
+    height: 3rem;
+    border-radius: 2.5rem;
+    background-color: #2d7cff;
+    border: none;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+}
+
+#star {
+    color: #FF3C3B;
+}
+
+#cus-details {
+    margin-bottom: 0.5rem;
+}
+
+#item-details {
+    margin-bottom: 0.5rem;
+}
+
+.items {
+    display: flex;
+}
+
+.item-name input, .item-qty input, .item-price input {
+    width: 10rem;
+}
+
+.item-name label, .item-qty label, .item-price label {
+    width: 12rem;
+}
+
+.item-name, .item-qty, .item-price {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.add-more {
+    width: 5rem;
+    height: 1.5rem;
+    border-radius: 0.4rem;
+    background-color: rgb(53, 181, 53);
+    border: none;
+    color: white;
+    text-align: center;
+}
+
+label {
+    padding-left: 0.5rem;
+}
+
+table {
+    color: #313643;
+    font-weight: bold;
+    border: none;
+}
+
+td {
+    height: 4rem;
+    border-bottom: 0.1rem solid #313643;
+}
+
+#gray {
+    background-color: #e6e6e6;
+}
+
+#white {
+    background-color: white;
+}
+
+.row-sln {
+    text-align: center;
+    width: 3.5rem;
+}
+
+.row-item {
+    padding-left: 2rem;
+    width: 23rem;
+}
+
+.row-price {
+    width: 8rem;
+    text-align: center;
+}
+
+.row-qty {
+    width: 8rem;
+    text-align: center;
+}
+
+.row-total {
+    width: 8rem;
+    text-align: center;
+}

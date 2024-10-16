@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerveBridge - Invoice generator</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <div class="form-container">
+        <div class="form">
+            <div class="form-title">
+                <h1 class="form-header">Create a New Invoice</h1>
+            </div>
+            <div class="form-details">
+
+                <form action="/invoice" method="POST">
+                    <div id="cus-details">
+                        <h3 class="form-subtitle">Customer Details</h3>
+                        <label for="customerName">Customer Name<span id="star">*</span></label><br>
+                        <input type="text" id="customerName" name="customerName">
+                        <label for="customerAddress">Customer Address<span id="star">*</span></label><br>
+                        <!-- <textarea id="customerAddress" name="customerAddress" ></textarea><br><br> -->
+                        <input id="customerAddress" name="customerAddress"></input>
+                    </div>
+
+                    <!-- Item Details -->
+                    <div id="item-details">
+                        <h3>Item Details</h3>
+                        <div class="items">
+                            <div class="item-name">
+                                <label for="itemName">Item Name<span id="star">*</span></label>
+                                <input type="text" id="itemName" name="itemName">
+                            </div>
+                            <div class="item-price">
+                                <label for="itemPrice">Item Price<span id="star">*</span></label>
+                                <input type="number" step="0.01" id="itemPrice" name="itemPrice">
+                            </div>
+                            <div class="item-qty">
+                                <label for="quantity">Quantity<span id="star">*</span></label>
+                                <input type="number" id="quantity" name="quantity"><br>
+                            </div>
+                        </div>
+                        <!-- <div class="add-more">
+                            <a href="">Add Row</a>
+                        </div> -->
+                        <button class="add-more" type="button">Add row</button>
+                    </div>
+
+                    <!-- Bank Details -->
+                    <div id="bank-details">
+                        <h3>Bank Details</h3>
+                        <label for="accountNumber">Account Number<span id="star">*</span></label>
+                        <input type="text" id="accountNumber" name="accountNumber">
+
+                        <label for="accountName">Account Name<span id="star">*</span></label>
+                        <input type="text" id="accountName" name="accountName">
+
+                        <label for="otherDetails">Other Bank Details:</label><br>
+                        <textarea id="otherDetails" name="otherDetails"></textarea><br><br>
+                    </div>
+
+                    <div class="submit">
+                        <button class="submit-btn" type="submit">Submit Invoice</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('.add-more').addEventListener('click', function (event) {
+                event.preventDefault();
+
+                let itemRow = document.querySelector('.items');
+
+                let itemRows = itemRow.cloneNode(true);
+
+                itemRows.querySelectorAll('input').forEach(input => {
+                    input.value = '';
+                });
+
+                const addButton = document.querySelector('.add-more');
+                document.getElementById('item-details').insertBefore(itemRows, addButton);
+            });
+        });
+
+    </script>
+    
+</body>
+
+</html>
