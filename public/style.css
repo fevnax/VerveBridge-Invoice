@@ -27,8 +27,9 @@ body {
 }
 
 #title3 {
-    font-size: 14px;
+    font-size: 13px;
     color: #313643;
+    font-weight: 500;
 }
 
 .container {
@@ -39,9 +40,11 @@ body {
 
 .invoice {
     width: 100%;
-    height: 800px;
+    /* height: 800px; */
+    height: auto;
     background-color: white;
     box-shadow: 0px 0px 30px 1px rgb(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
 }
 
 .invoice-header {
@@ -241,7 +244,8 @@ body {
 
 .form-details {
     width: 95%;
-    height: 90%;
+    /* height: 90%; */
+    height: auto;
     display: flex;
     flex-direction: column;
 }
@@ -301,15 +305,21 @@ textarea {
     display: flex;
 }
 
-.item-name input, .item-qty input, .item-price input {
+.item-name input,
+.item-qty input,
+.item-price input {
     width: 10rem;
 }
 
-.item-name label, .item-qty label, .item-price label {
+.item-name label,
+.item-qty label,
+.item-price label {
     width: 12rem;
 }
 
-.item-name, .item-qty, .item-price {
+.item-name,
+.item-qty,
+.item-price {
     display: flex;
     flex-direction: column;
 }
@@ -374,5 +384,117 @@ td {
 
 .row-total {
     width: 8rem;
+    text-align: center;
+}
+
+.checkout-summary {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 10rem; */
+    margin: 0 60px;
+    color: #313643;
+}
+
+.summary-info {
+    width: 40%;
+}
+
+.summary-totals {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.payment-info {
+    margin: 2.5rem 0;
+}
+
+.terms {
+    margin-bottom: 3rem;
+}
+
+.total {
+    display: flex;
+    /* padding-left: 2rem; */
+    position: relative;
+    left: 7rem;
+}
+
+#total-amt {
+    font-size: 22px;
+    padding-left: 1rem;
+}
+
+.item-total {
+    margin-top: 0.5rem;
+}
+
+#span1 {
+    padding-left: 3.5rem;
+    padding-right: 1rem;
+}
+
+#span2 {
+    padding-left: 7rem;
+    padding-right: 0.8rem;
+}
+
+#span3 {
+    padding-left: 5rem;
+}
+
+.sub-total {
+    margin-bottom: 0.5rem;
+}
+
+.tax {
+    margin-bottom: 0.5rem;
+}
+
+.auth-sign {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sign-area {
+    width: 11rem;
+    height: 0.1rem;
+    position: relative;
+    left: 9rem;
+    margin-bottom: 0.25rem;
+    /* padding-left: 5rem; */
+    background-color: black;
+}
+
+.brand-sign {
+    position: relative;
+    left: 10rem;
+    margin-bottom: 1.5rem;
+}
+
+.signature {
+    width: 8rem;
+    height: auto;
+    margin-top: 4.5rem;
+    position: relative;
+    left: 10.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.thank {
+    display: flex;
+    width: 45%;
+}
+
+.footer {
+    width: 100%;
+    /* background-color: #cecdcd; */
+    background-color: #e6e6e6;
+}
+
+#thankyou {
+    font-size: 16px;
+    color: white;
     text-align: center;
 }

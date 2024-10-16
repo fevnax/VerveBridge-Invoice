@@ -122,12 +122,67 @@
                 <div class="table-footer"></div>
             </div>
 
-            <div class="payment-info">
-                <div class="acc-number"></div>
-                <div class="bank-details"></div>
+            <div class="checkout-summary">
+                <div class="summary-info">
+                    <div class="payment-info">
+                        <!-- <div class="acc-number"></div>
+                        <div class="acc-name"></div>
+                        <div class="bank-details"></div> -->
+                        <h1 id="title1">Payment Info:</h1>
+                        <p id="title3">Account #: <%= accountNumber %>
+                        </p>
+                        <p id="title3">A/C Name: <%= accountName %>
+                        </p>
+                        <p id="title3">Bank Details: <%= otherDetails %>
+                        </p>
+                    </div>
+                    <div class="terms">
+                        <h1 id="title1">Terms & Conditions</h1>
+                        <p id="title3">Payment is due within 30 days. A late fee of 1.5% applies to overdue payments.
+                        </p>
+                    </div>
+                </div>
+                <div class="summary-totals">
+                    <div class="item-total">
+                        <div class="sub-total">
+                            <h2 id="title1" style="text-align: right;">Sub Total: <span id="span1">
+                                    $<%= subtotal %>
+                                </span></h2>
+
+                        </div>
+                        <div class="tax">
+                            <h2 id="title1" style="text-align: right;">Tax: <span id="span2">
+                                    <%= tax %>%
+                                </span></h2>
+                        </div>
+                        <div class="total">
+                            <div class="rectangle" style="width: 65%;">
+                                <h2 id="total-amt">Total: <span id="span3">$<%= total %></span></h2>
+                            </div>
+                            <div class="arrow-right"></div>
+                        </div>
+
+                        <!-- <h1></h1> -->
+                    </div>
+                    <div class="auth-sign">
+                        <img class="signature" src="/images/vervebridge_sign.jpg" alt="">
+                        <div class="sign-area"></div>
+                        <h2 class="brand-sign" id="title1">Authorised Sign</h2>
+                    </div>
+                </div>
             </div>
+            <div class="footer">
+                <div class="thank">
+                    <div class="rectangle" style="display: flex; justify-content: center;">
+                        <h2 id="thankyou">Thank you for your business</h2>
+                    </div>
+                    <div class="arrow-right"></div>
+                </div>
 
+                <div class="shape">
 
+                </div>
+            </div>
         </div>
     </div>
 
